@@ -116,7 +116,7 @@ Description:
 
     <main>
       <article>
-        <!-- insert iframe from youtube -->
+        <iframe src="https://www.youtube.com/embed/ojcNcvb1olg?controls=1" title="Choose Firefox"></iframe>
 
         <h2>Rocking the free web</h2>
 
@@ -149,12 +149,15 @@ Description:
             alt="Alt Mozilla dinosaur logo">
         </a>
         <div class="clearfix"></div>
+        
+        
       </div>
 
       <div class="red-panda">
-          <img
-            src="red-panda.jpg"
-            alt="Red-Panda image">
+        <picture>
+            <source media="(max-width: 600px)" srcset="red-panda-large.jpg">
+            <img src="red-panda-small.jpg" alt="Red Panda Image">
+          </picture>
       </div>
 
     </main>
