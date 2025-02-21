@@ -15,7 +15,6 @@ html {
     color: white;
     font-size: 32px;
     text-shadow: 5px 5px 5px  black;
-    box-shadow: 4px 4px 4px 0 white;
-    box-shadow: 6px 6px 6px 0px white;
-    box-shadow: inset -2px -2px 2px -0px black;
+    box-shadow:inset 6px 6px 6px 1px rgba(255, 255, 255, 0.8), 4px 4px 4px rgba(0, 0, 0, 0.5), inset -4px -4px 4px 1px rgba(0,0,0,0.8); 
+    
   }
