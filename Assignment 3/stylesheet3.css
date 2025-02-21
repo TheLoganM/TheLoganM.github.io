@@ -31,8 +31,13 @@
   }
   
   nav {
+    list-style-type: none;
     float: left;
     width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
   }
   
   footer {
@@ -78,9 +83,31 @@
     font-style: italic;
   } 
 
-  ul, ol {
+ ol {
     line-height: 1.5;
     word-spacing: 1.2px;
     letter-spacing: 1.5px;
-    list-style:disc;
+    list-style:circle;
   }
+ nav ul li {
+    list-style-type: none;
+    width: 100px;
+    justify-content: space-between;
+    gap: 100px;
+    margin: 10px;
+    padding: 0px;
+    border: solid 2px black;
+    line-height: 5;
+    text-align: center;
+ }
+ ul {
+    list-style: circle;
+    line-height: 1.5;
+    word-spacing: 1.2px;
+    letter-spacing: 1.5px;
+ }
+
+ body a {
+  
+ }
+ 
