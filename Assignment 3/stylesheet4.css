@@ -1,3 +1,10 @@
+/*
+Name: Logan Morrow
+Date: February 21, 2025
+File: stylesheet.css4
+Description: use flex boxes and grid to create a proper format for the images as well as editing the nav bar
+*/
+
 body {
     background-color: #fff;
     color: #333;
@@ -15,6 +22,7 @@ body {
     padding: 50px 20px;
     margin: 0 auto;
     max-width: 980px;
+    text-align: center;
   }
   
   .grid {
@@ -26,6 +34,8 @@ body {
   nav {
     background-color: #000;
     padding: .5em;
+    position: sticky;
+    top: 0;
   }
   
   nav ul {
@@ -44,8 +54,54 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    float: right;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    position: static;
+    bottom: 100px;
+    left: 100px;
+    text-wrap: normal;
+    width: 55%;
   }
 
   .feature {
       width: 200px;
   }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    justify-content: space-between ;
+  }
+
+  article p {
+    text-wrap: balance;
+    clear: right;
+    margin: 15px;
+    padding-left: 5px;
+
+  }
+  article img {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+    width: 50%;
+
+  }
+  aside ul  {
+    float: right;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 0px;
+    
+
+    
+    
+    }
+
