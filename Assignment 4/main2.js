@@ -1,3 +1,10 @@
+/* 
+Name: Logan
+Date: April 2, 2025
+Description: Write some JS to created a photo selector with the ability to darken/ligten the images
+
+*/
+
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
@@ -32,17 +39,14 @@ btn.addEventListener('click', () => {
     if (btnclass === 'dark') {
         btn.setAttribute ('class', 'light')
         btn.textContent = 'Lighten'
-        overlay.style.backroundcolor = rgba(0,0,0,0.7)
+        overlay.style.backroundcolor = rgba(0, 0, 0, 0.5)
     } else {
-
         btn.setAttribute('class', 'dark')
-        btn.textContent('Darken')
+        btn.textContent = ('Darken')
         overlay.style.backroundcolor = rgba(0,0,0,0)
     }
 
 
-}
+})
 
 
-
-)
