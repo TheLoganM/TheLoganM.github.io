@@ -24,10 +24,10 @@ const alt = {
 }
 /* Looping through images */
 for (const image of images){
-    const newImage = document.createElement('img');
-    newImage.setAttribute('src', `images/${image}`);
-    newImage.setAttribute('alt',[image]);
-    thumbBar.appendChild(newImage);
+    const newImage = document.createElement('img')
+    newImage.setAttribute('src', `images/${image}`)
+    newImage.setAttribute('alt', alt[image])
+    thumbBar.appendChild(newImage)
     newImage.addEventListener('click', e => {
         displayedImage.src = e.target.src
         displayedImage.alt = e.target.alt
@@ -35,15 +35,15 @@ for (const image of images){
 }
 /* Wiring up the Darken/Lighten button */
 btn.addEventListener('click', () => {
-    const btnclass = btn.getAttribute('class')
+    const btnclass = btn.getAttribute('class');
     if (btnclass === 'dark') {
-        btn.setAttribute ('class', 'light')
-        btn.textContent = 'Lighten'
-        overlay.style.backroundcolor = rgba(0, 0, 0, 0.5)
+        btn.setAttribute ('class', 'light');
+        btn.textContent = 'Lighten';
+        overlay.style.backroundColor = 'rgba(0, 0, 0, 0.5)';
     } else {
-        btn.setAttribute('class', 'dark')
-        btn.textContent = ('Darken')
-        overlay.style.backroundcolor = rgba(0,0,0,0)
+        btn.setAttribute('class', 'dark');
+        btn.textContent = 'Darken';
+        overlay.style.backroundColor = 'rgba(0,0,0,0)';
     }
 
 
