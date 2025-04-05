@@ -1,3 +1,12 @@
+/* 
+Name: Logan
+Date: April 3, 2025
+Description: Take the 'Ball' code and add an evil ball that is controllable and can destroy the other balls
+*/
+
+
+
+
 // set up canvas
 let count = 0
 const para = document.querySelector('p')
