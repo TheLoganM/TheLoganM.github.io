@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 
 Name: Logan
 Date: April 3, 2025
@@ -7,6 +8,8 @@ Description: Take the 'Ball' code and add an evil ball that is controllable and 
 
 
 
+=======
+>>>>>>> fe92565 (commit 9 - Fixed the ball spawns, probelm was 2 missing = sighs (HAHAHAHAHA))
 // set up canvas
 let count = 0
 const para = document.querySelector('p')
@@ -139,6 +142,7 @@ checkbounds() {
   }
 }
 
+<<<<<<< HEAD
   collisionDetect() {
     for (const ball of balls) {
       if (ball.exists) {
@@ -149,6 +153,19 @@ checkbounds() {
           ball.exists = false
           count--
           para.textContent = 'Ball Count : ' + count
+=======
+collisionDetect() {
+  for (const ball of balls) {
+    if (ball.exists) {
+      const dx = this.x - ball.x;
+      const dy = this.y - ball.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < this.size + ball.size) {
+          ball.exists = false
+          count--
+          para.textcontext = 'Ball Count: ' + count
+>>>>>>> fe92565 (commit 9 - Fixed the ball spawns, probelm was 2 missing = sighs (HAHAHAHAHA))
         }
       }
     }
