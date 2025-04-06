@@ -1,24 +1,10 @@
-<<<<<<< HEAD
-=======
+// setup canvas
 
+const para = document.querySelector('p');
+let count = 0;
 
->>>>>>> fe92565 (commit 9 - Fixed the ball spawns, probelm was 2 missing = sighs (HAHAHAHAHA))
-/* 
-Name: Logan
-Date: April 3, 2025
-Description: Take the 'Ball' code and add an evil ball that is controllable and can destroy the other balls
-*/
-
-
-
-
-=======
->>>>>>> fe92565 (commit 9 - Fixed the ball spawns, probelm was 2 missing = sighs (HAHAHAHAHA))
-// set up canvas
-let count = 0
-const para = document.querySelector('p')
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
 
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
@@ -131,45 +117,35 @@ class EvilCircle extends Shape {
     ctx.stroke();
   }
 
-checkbounds() {
-  if ((this.x + this.size )>= width) {
-    this.x -= this.size
-  }
-  if ((this.x + this.size)<= 0) {
-    this.x += this.size
-  }
-  if ((this.y + this.size)>= height){
-    this.y -= this.size
-  }
-  if ((this.y + this.size)<= 0){
-    this.y += this.size
-  }
-}
+  checkBounds() {
+    if ((this.x + this.size) >= width) {
+      this.x -= this.size;
+    }
 
-<<<<<<< HEAD
+    if ((this.x - this.size) <= 0) {
+      this.x += this.size;
+    }
+
+    if ((this.y + this.size) >= height) {
+      this.y -= this.size;
+    }
+
+    if ((this.y - this.size) <= 0) {
+      this.y += this.size;
+    }
+  }
+
   collisionDetect() {
     for (const ball of balls) {
       if (ball.exists) {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
-        const distance = Math.sqrt(dx * dx + dy * dy)
-        if (distance < this.size + ball.size) {
-          ball.exists = false
-          count--
-          para.textContent = 'Ball Count : ' + count
-=======
-collisionDetect() {
-  for (const ball of balls) {
-    if (ball.exists) {
-      const dx = this.x - ball.x;
-      const dy = this.y - ball.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
+        const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < this.size + ball.size) {
-          ball.exists = false
-          count--
-          para.textcontext = 'Ball Count: ' + count
->>>>>>> fe92565 (commit 9 - Fixed the ball spawns, probelm was 2 missing = sighs (HAHAHAHAHA))
+          ball.exists = false;
+          count--;
+          para.textContent = 'Ball count: ' + count;
         }
       }
     }
@@ -216,4 +192,4 @@ function loop() {
   requestAnimationFrame(loop);
 }
 
-loop()
+loop();
