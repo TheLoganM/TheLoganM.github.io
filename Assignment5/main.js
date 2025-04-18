@@ -1,3 +1,10 @@
+/*
+Name: Logan Morrow
+Date: April 14
+Description: The purpose of this assignment is to edit the given code to make the website more accesible
+
+*/
+
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
