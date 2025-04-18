@@ -84,7 +84,7 @@ div[class="nav"] ul {
   display: flex;
 }
 
-div[class="nav"] li {
+nav[class="nav"] li {
   display: inline;
   text-align: center;
   flex: 1;
